@@ -5,6 +5,7 @@ public class Exercise02 {
 	private final int[] testData = new int[ARR_SIZE]; // 8MB
 
 	private void run() {
+		
 		System.err.println("Started at : " + System.currentTimeMillis());
 		for (var i = 0; i < 15_000; i++) {
 			touchEveryLine();
