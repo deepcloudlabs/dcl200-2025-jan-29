@@ -19,7 +19,7 @@ public class LotteryApplication {
 	public static void main(String[] args) throws MalformedObjectNameException, InstanceAlreadyExistsException, MBeanRegistrationException, NotCompliantMBeanException {
 		MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
 		StandardLotteryService lotteryService = new StandardLotteryService();
-		ObjectName mBeanName = new ObjectName("com.example.jmx:type=WebServiceQuality");
+		ObjectName mBeanName = new ObjectName("com.logo:type=WebServiceQuality");
 		WebServiceQualitySampler sampler = new WebServiceQualitySampler(lotteryService);
 		mBeanServer.registerMBean(sampler, mBeanName );
 		lotteryService.addObserver(sampler);
