@@ -16,8 +16,9 @@ public class LotteryApplication {
 
 	public static void main(String[] args) {
 		var lotteryService = new StandardLotteryService();
-		getRandomService().ifPresent(lotteryService::setRandomService);
-		
+		var randomService = getRandomService();
+		randomService.map(Object::getClass).map(Class::getSimpleName).ifPresent(System.out::println);
+		randomService.ifPresent(lotteryService::setRandomService);
 		lotteryService.draw(60, 6, 10)
 		              .forEach(System.out::println);
 	}
