@@ -14,10 +14,13 @@ public class StudyObjectLayout {
 	}
 
 }
+
+class DDD {} // 16-Byte
+
 class AAA { Object ref; }
 
-class G {
-	int x;
+class G { // 24-Byte
+	long x;
 }
 class H extends G {
 	char y;

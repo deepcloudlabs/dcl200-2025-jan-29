@@ -13,6 +13,8 @@ public class Exercise05 {
 		var circle = weakRef.get();
 		if (Objects.nonNull(circle)) {
 			System.out.println(circle.area());
+		} else {
+			System.out.println("No longer references to the Circle object.");
 		}
 
 	}

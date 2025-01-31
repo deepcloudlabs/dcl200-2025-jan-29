@@ -4,8 +4,8 @@ public class Exercise06 {
 
 	public static void main(String[] args) {
 		var start = System.currentTimeMillis();
-		var s = new StringBuilder(68888890);
-		for (var i = 0; i < 10_000_000; ++i) {
+		var s = new StringBuilder(1_000_000_000);
+		for (var i = 0; i < 100_000_000; ++i) {
 			s.append(Integer.toString(i));
 		}
 		var stop = System.currentTimeMillis();
